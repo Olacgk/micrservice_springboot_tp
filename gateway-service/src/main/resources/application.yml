@@ -8,11 +8,11 @@ spring:
     gateway:
       routes:
         - id: client-service
-          uri: lb://client-service
+          uri: lb:http://localhost:client-service
           predicates:
-            - Path=/client/**
+            - Path=/api/client/**
         - id: contract-service
-          uri: lb://contract-service
+          uri: lb:http://contract-service
           predicates:
             - Path=/contract/**
 
